@@ -1,0 +1,15 @@
+Symbol,TCP,TSEQ,GP,Status
+0,296,1024,0,unused_time_occasion
+1,0,1024,0,unused_time_occasion
+2,0,1024,0,unused_time_occasion
+3,0,1024,0,unused_time_occasion
+4,296,1024,0,unused_time_occasion
+5,0,1024,0,unused_time_occasion
+6,0,1024,0,unused_time_occasion
+7,0,1024,0,unused_time_occasion
+8,180,1024,0,active
+9,0,1024,0,active
+10,0,1024,0,active
+11,0,1024,108,active
+12,0,1024,0,not_used
+13,0,1024,0,not_used

@@ -1,0 +1,9 @@
+# Streamlit 단일 앱 (루트 app.py)
+streamlit>=1.28.0
+numpy>=1.21.0
+pandas>=1.3.0
+plotly>=5.0.0
+# PRACHAnalyzer.step4 / visualizer PNG 저장 시에만 필요 (Streamlit SIB 화면은 미사용)
+matplotlib>=3.4.0
+
+# MATLAB Engine for Python 은 MATLAB 설치 시 함께 제공 (pip 아님)

@@ -1,0 +1,7 @@
+LRA,PRACHSubcarrierSpacing,PUSCHSubcarrierSpacing,NRBAllocation,kbar
+839,1.25,15,6,7
+839,5.0,15,24,12
+139,15.0,15,12,2
+139,30.0,15,24,2
+139,30.0,30,12,2
+139,60.0,60,12,2

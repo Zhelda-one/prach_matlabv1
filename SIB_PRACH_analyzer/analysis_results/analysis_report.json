@@ -1,0 +1,233 @@
+{
+  "overview": {
+    "total_occasions": 1280,
+    "total_frames": 20.0,
+    "frame_range": [
+      0,
+      19
+    ]
+  },
+  "frame_analysis": {
+    "total_frames": 20,
+    "occasions_per_frame_mean": 64.0,
+    "occasions_per_frame_std": 0.0,
+    "occasions_per_frame_min": 64.0,
+    "occasions_per_frame_max": 64.0,
+    "frame_distribution": {
+      "0": 64,
+      "1": 64,
+      "2": 64,
+      "3": 64,
+      "4": 64,
+      "5": 64,
+      "6": 64,
+      "7": 64,
+      "8": 64,
+      "9": 64,
+      "10": 64,
+      "11": 64,
+      "12": 64,
+      "13": 64,
+      "14": 64,
+      "15": 64,
+      "16": 64,
+      "17": 64,
+      "18": 64,
+      "19": 64
+    }
+  },
+  "slot_analysis": {
+    "total_slots": 1,
+    "occasions_per_slot": {
+      "0": 1280
+    },
+    "most_common_slot": 0.0,
+    "most_common_slot_count": 1280.0,
+    "slot_statistics": {
+      "mean": 1280.0,
+      "std": NaN,
+      "min": 1280.0,
+      "max": 1280.0
+    }
+  },
+  "symbol_analysis": {
+    "total_symbols": 1,
+    "occasions_per_symbol": {
+      "0": 1280
+    },
+    "most_common_symbol": 0.0,
+    "most_common_symbol_count": 1280.0,
+    "symbol_statistics": {
+      "mean": 1280.0,
+      "std": NaN,
+      "min": 1280.0,
+      "max": 1280.0
+    }
+  },
+  "subframe_analysis": {
+    "total_subframes": 10,
+    "occasions_per_subframe": {
+      "0": 128,
+      "10": 128,
+      "20": 128,
+      "30": 128,
+      "40": 128,
+      "50": 128,
+      "60": 128,
+      "70": 128,
+      "80": 128,
+      "90": 128
+    },
+    "subframe_statistics": {
+      "mean": 128.0,
+      "std": 0.0,
+      "min": 128.0,
+      "max": 128.0
+    }
+  },
+  "preamble_analysis": {
+    "total_preambles": 64,
+    "occasions_per_preamble": {
+      "0": 20,
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20,
+      "7": 20,
+      "8": 20,
+      "9": 20,
+      "10": 20,
+      "11": 20,
+      "12": 20,
+      "13": 20,
+      "14": 20,
+      "15": 20,
+      "16": 20,
+      "17": 20,
+      "18": 20,
+      "19": 20,
+      "20": 20,
+      "21": 20,
+      "22": 20,
+      "23": 20,
+      "24": 20,
+      "25": 20,
+      "26": 20,
+      "27": 20,
+      "28": 20,
+      "29": 20,
+      "30": 20,
+      "31": 20,
+      "32": 20,
+      "33": 20,
+      "34": 20,
+      "35": 20,
+      "36": 20,
+      "37": 20,
+      "38": 20,
+      "39": 20,
+      "40": 20,
+      "41": 20,
+      "42": 20,
+      "43": 20,
+      "44": 20,
+      "45": 20,
+      "46": 20,
+      "47": 20,
+      "48": 20,
+      "49": 20,
+      "50": 20,
+      "51": 20,
+      "52": 20,
+      "53": 20,
+      "54": 20,
+      "55": 20,
+      "56": 20,
+      "57": 20,
+      "58": 20,
+      "59": 20,
+      "60": 20,
+      "61": 20,
+      "62": 20,
+      "63": 20
+    },
+    "preamble_statistics": {
+      "mean": 20.0,
+      "std": 0.0,
+      "min": 20.0,
+      "max": 20.0
+    }
+  },
+  "frequency_analysis": {
+    "total_frequency_offsets": 1,
+    "occasions_per_frequency": {
+      "7": 1280
+    },
+    "frequency_offsets": [
+      7
+    ]
+  },
+  "gap_analysis": {
+    "total_gaps": 1279,
+    "gap_statistics": {
+      "mean": 2.0797498045347926,
+      "std": 16.942964838756453,
+      "min": 0.0,
+      "max": 140.0,
+      "median": 0.0
+    },
+    "gap_distribution": {
+      "0.0": 1260,
+      "140.0": 19
+    }
+  },
+  "collision_analysis": {
+    "total_collision_patterns": 1,
+    "collision_details": [
+      {
+        "slot": 0,
+        "symbol": 0,
+        "preamble_count": 1280,
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    ],
+    "most_collided_slot_symbol": [
+      0.0,
+      0.0
+    ],
+    "max_collision_count": 1280.0
+  },
+  "high_density_slots": {
+    "threshold": 1280.0,
+    "high_density_slots": [
+      0
+    ],
+    "slot_counts": {
+      "0": 1280
+    },
+    "total_high_density_occasions": 1280
+  }
+}

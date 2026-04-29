@@ -1,0 +1,55 @@
+
+PRACH ANALYSIS SUMMARY REPORT
+============================================================
+Generated: 2026-04-20 17:11:55
+SIB1 File: temp_sib1.txt
+
+[PRACH Configuration]
+------------------------------------------------------------
+PRACH Config Index: 14
+msg1 FDM: one (1 multiplexing)
+msg1 Frequency Start: 7 RB
+Zero Correlation Zone: 9
+Preamble Transmission Max: n20 (20 retries)
+RA Response Window: sl10 (10 slots)
+Power Ramping Step: dB2 (2.0 dB)
+Preamble Target Power: -104 dBm
+
+[Overview]
+------------------------------------------------------------
+Total PRACH Occasions: 1,280
+Frame Range: 0 - 19
+Total Frames: 20
+
+[Frame Analysis]
+------------------------------------------------------------
+Occasions per Frame (Mean): 64.00
+Occasions per Frame (Std): 0.00
+Occasions per Frame (Min): 64
+Occasions per Frame (Max): 64
+
+[Slot Analysis]
+------------------------------------------------------------
+Total Unique Slots: 1
+Most Common Slot: 0
+Most Common Slot Count: 1280
+
+[Symbol Analysis]
+------------------------------------------------------------
+Total Unique Symbols: 1
+Most Common Symbol: 0
+Most Common Symbol Count: 1280
+
+[Collision Analysis]
+------------------------------------------------------------
+Total Collision Patterns: 1
+Max Collision Count: 1280
+
+[Gap Analysis]
+------------------------------------------------------------
+Total Gaps: 1279
+Gap Mean: 2.08 symbols
+Gap Std: 16.94 symbols
+Gap Min: 0 symbols
+Gap Max: 140 symbols
+Gap Median: 0 symbols

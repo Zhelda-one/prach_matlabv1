@@ -1,0 +1,38 @@
+======================================================================
+PRACH TIME-FREQUENCY MAPPING REPORT
+======================================================================
+
+[PRACH CONFIGURATION]
+Config Index: 14
+msg1 Frequency Start: 7 RB
+msg1 FDM: 1
+Analysis Period: 20 frames
+
+[TIME DOMAIN]
+Total Frames: 20
+Frame List: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]...
+Total Slots: 1
+Slot Numbers: [0]
+Total Symbols: 1
+Symbol Numbers: [0]
+Occasions per Frame: 64
+
+[FREQUENCY DOMAIN]
+RB Range: 7-12
+RB Count: 6 RBs
+Subcarrier Start: 84
+Subcarrier End: 155
+Total Subcarriers: 72
+Center Frequency: 1.80 kHz
+SCS: 15 kHz
+
+[SUMMARY]
+Total PRACH Occasions: 1,280
+Total Preambles per Occasion: 64
+Frequency Multiplexing: 1×
+
+[TIME-FREQUENCY STRUCTURE]
+Time slots: Frame 0 to Frame 19
+Slot: [0]
+Symbol: [0]
+Frequency: RB 7-12
