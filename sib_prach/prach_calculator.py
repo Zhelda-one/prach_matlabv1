@@ -114,7 +114,8 @@ class PRACHCalculator:
         # PRACH 프리앰블 시퀀스 길이 (샘플)
         self.prach_preamble_length = 839  # Long sequence (L839)
         
-        # 슬롯 당 심볼 수 (기본값: 14 symbols/slot)
+        # 슬롯/심볼 설정 (15kHz SCS 기준: 10 slots/frame, 14 symbols/slot)
+        self.slots_per_frame = 10
         self.symbols_per_slot = 14
         
     def get_prach_occasions_fr1(self, 
@@ -140,16 +141,16 @@ class PRACHCalculator:
         
         for frame_idx in range(num_frames):
             frame = start_frame + frame_idx
-            
+
             for periodicity_slots, slot_offset, symbol, duration in config_entries:
-                # 주기성에 따라 프레임 필터링
-                if frame % (periodicity_slots // 10) == slot_offset // 10:
-                    # Slot 계산 (슬롯 오프셋 사용)
-                    slot = slot_offset % 10
-                    
-                    # Subframe 계산 (프레임당 10 서브프레임)
-                    subframe = (frame % 10) * 10 + (slot // 10)
-                    
+                for slot_in_frame in range(self.slots_per_frame):
+                    absolute_slot = frame * self.slots_per_frame + slot_in_frame
+                    if (absolute_slot - slot_offset) % periodicity_slots != 0:
+                        continue
+
+                    slot = slot_in_frame
+                    subframe = slot_in_frame
+
                     for preamble_idx in range(64):  # 64개의 프리앰블
                         occasion = {
                             'occasion_id': occasion_id,
@@ -181,7 +182,7 @@ class PRACHCalculator:
         df = pd.DataFrame(occasions)
         
         # 추가 정보 계산
-        df['absolute_slot'] = df['frame'] * 10 + df['slot']
+        df['absolute_slot'] = df['frame'] * self.slots_per_frame + df['slot']
         df['absolute_symbol'] = df['absolute_slot'] * self.symbols_per_slot + df['symbol']
         df['frequency_khz'] = (df['frequency_offset_rb'] * 12 * self.scs.value) / 1000
         

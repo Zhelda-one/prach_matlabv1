@@ -165,16 +165,19 @@ class PRACHDataAnalyzer:
     
     def compare_with_another(self, other_df: pd.DataFrame) -> Dict[str, Any]:
         """다른 PRACH 설정과 비교"""
+        key_cols = ['frame', 'subframe', 'slot', 'symbol']
+        merged = pd.merge(
+            self.df[key_cols],
+            other_df[key_cols],
+            on=key_cols,
+            how='outer',
+            indicator=True,
+        )
+
         diff = {
-            'same_occasions_count': len(pd.merge(self.df, other_df, 
-                                                   on=['frame', 'subframe', 'slot', 'symbol'],
-                                                   how='inner')),
-            'unique_to_self': len(pd.merge(self.df, other_df,
-                                           on=['frame', 'subframe', 'slot', 'symbol'],
-                                           how='left_only')),
-            'unique_to_other': len(pd.merge(self.df, other_df,
-                                            on=['frame', 'subframe', 'slot', 'symbol'],
-                                            how='right_only')),
+            'same_occasions_count': int((merged['_merge'] == 'both').sum()),
+            'unique_to_self': int((merged['_merge'] == 'left_only').sum()),
+            'unique_to_other': int((merged['_merge'] == 'right_only').sum()),
             'self_total': len(self.df),
             'other_total': len(other_df),
         }
