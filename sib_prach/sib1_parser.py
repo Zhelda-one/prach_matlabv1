@@ -39,9 +39,9 @@ class SIB1Parser:
 
         return self.data
 
-    def _extract_value(self, pattern: str, default=None) -> Optional[str]:
+    def _extract_value(self, pattern: str, default=None, flags: int = re.IGNORECASE) -> Optional[str]:
         assert self.content is not None
-        match = re.search(pattern, self.content, re.IGNORECASE)
+        match = re.search(pattern, self.content, flags)
         if match:
             return match.group(1)
         return default
@@ -79,7 +79,8 @@ class SIB1Parser:
     def _parse_ul_config(self) -> Dict[str, Any]:
         return {
             "freq_band_ul": self._extract_value(
-                r"frequencyBandList\[0\].*?freqBandIndicatorNR\s*=\s*(\d+)", re.DOTALL
+                r"frequencyBandList\[0\].*?freqBandIndicatorNR\s*=\s*(\d+)",
+                flags=re.IGNORECASE | re.DOTALL,
             ),
             "absolute_freq_point_a": self._extract_value(r"absoluteFrequencyPointA\s*=\s*(\d+)"),
         }
